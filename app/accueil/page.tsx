@@ -1,4 +1,4 @@
-export default function Accueil() {
+import Link from "next/link";export default function Accueil() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#FDF6E8] to-[#F5E6D3] pb-24">
       
@@ -70,25 +70,25 @@ export default function Accueil() {
 
       </div>
 
-      {/* Navbar */}
+     {/* Navbar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3">
         <div className="flex justify-around">
           <div className="text-center">
             <span className="text-2xl">🏠</span>
             <p className="text-xs font-semibold text-[#E8A43A]">Accueil</p>
           </div>
-          <div className="text-center">
+          <Link href="/carte" className="text-center">
             <span className="text-2xl">🗺️</span>
             <p className="text-xs text-[#A69580]">Carte</p>
-          </div>
-          <div className="text-center">
+          </Link>
+          <Link href="/partenaires" className="text-center">
             <span className="text-2xl">⭐</span>
             <p className="text-xs text-[#A69580]">Partenaires</p>
-          </div>
-          <div className="text-center">
+          </Link>
+          <Link href="/infos" className="text-center">
             <span className="text-2xl">👤</span>
             <p className="text-xs text-[#A69580]">Infos</p>
-          </div>
+          </Link>
         </div>
       </div>
 
