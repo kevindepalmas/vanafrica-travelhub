@@ -18,7 +18,7 @@ import Link from "next/link";export default function Home() {
       <div className="flex-1 px-6 py-6">
         
         {/* Salutation */}
-        <p className="text-[#3D2B1F] mb-2">Bonjour Marc,</p>
+        <p className="text-[#3D2B1F] mb-2">Bonjour Stéphane,</p>
         
         {/* Titre confirmation */}
         <h2 className="text-xl font-bold text-[#E8A43A] mb-6" style={{ fontFamily: 'serif' }}>
