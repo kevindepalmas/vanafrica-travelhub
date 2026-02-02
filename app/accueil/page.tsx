@@ -22,10 +22,9 @@ import Link from "next/link";export default function Accueil() {
         </h1>
 
         {/* Hero Card */}
-        <div className="rounded-2xl overflow-hidden shadow-lg mb-6">
-          <div className="bg-gradient-to-r from-[#F5C45A] to-[#E8A43A] h-32 flex items-center justify-center text-5xl">
-            🌅🚐
-          </div>
+<div className="rounded-2xl overflow-hidden shadow-lg mb-6">
+  <div className="h-32 bg-cover bg-center" style={{ backgroundImage: "url('/hero-garden-route.jpg')" }}>
+  </div>
           <div className="bg-white p-4">
             <p className="text-sm text-[#A69580]">Votre aventure</p>
             <h2 className="text-lg font-bold text-[#3D2B1F]">

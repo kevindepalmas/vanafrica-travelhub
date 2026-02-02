@@ -11,10 +11,9 @@ export default function Addo() {
         <span className="text-xl text-[#A69580]">♡</span>
       </div>
 
-      {/* Hero image */}
-      <div className="h-48 bg-gradient-to-r from-[#5D7A3A] to-[#8B4513] flex items-center justify-center text-6xl">
-        🐘🦁🌿
-      </div>
+   {/* Hero image */}
+<div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('/addo.jpg')" }}>
+</div>
 
       {/* Contenu */}
       <div className="px-4 py-4">

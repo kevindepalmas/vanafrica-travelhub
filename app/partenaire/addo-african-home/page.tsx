@@ -14,11 +14,8 @@ export default function AddoAfricanHome() {
         </div>
       </div>
 
-      {/* Hero image */}
-      <div className="h-56 bg-gradient-to-r from-[#5D7A3A] to-[#8B4513] relative">
-        <div className="absolute inset-0 flex items-center justify-center text-6xl">
-          🏡🌴🐘
-        </div>
+    {/* Hero image */}
+<div className="h-56 bg-cover bg-center relative" style={{ backgroundImage: "url('/lodge.jpg')" }}>
         {/* Dots carrousel */}
         <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
           <div className="w-2 h-2 rounded-full bg-white"></div>

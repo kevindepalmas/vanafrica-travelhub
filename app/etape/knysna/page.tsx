@@ -11,10 +11,9 @@ export default function Knysna() {
         <span className="text-xl text-[#A69580]">♡</span>
       </div>
 
-      {/* Hero image */}
-      <div className="h-48 bg-gradient-to-r from-[#F5C45A] to-[#E8A43A] flex items-center justify-center text-6xl">
-        🦪🌊🌅
-      </div>
+     {/* Hero image */}
+<div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('/knysna.jpg')" }}>
+</div>
 
       {/* Contenu */}
       <div className="px-4 py-4">
