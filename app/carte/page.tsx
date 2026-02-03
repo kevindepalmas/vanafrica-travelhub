@@ -24,101 +24,72 @@ export default function Carte() {
       </div>
 
       {/* Carte visuelle style Polarsteps */}
-      <div className="relative h-52 bg-gradient-to-br from-[#87CEEB] via-[#98D4BB] to-[#C2B280] overflow-hidden">
-        {/* Points d'étape sur la carte */}
-        <div className="absolute top-8 left-6">
-          <div className="w-4 h-4 bg-[#E8A43A] rounded-full border-2 border-white shadow-lg"></div>
-          <span className="text-[10px] font-bold text-white drop-shadow-md ml-1">CPT</span>
-        </div>
-        
-        <div className="absolute top-12 left-16">
-          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
-        </div>
+<div className="relative h-64 overflow-hidden">
+  {/* Image de fond carte */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/map-garden-route.jpg')" }}
+  ></div>
+  
+  {/* Overlay sombre pour lisibilité */}
+  <div className="absolute inset-0 bg-black/30"></div>
+  
+  {/* Titre du voyage */}
+  <div className="absolute top-4 left-4 text-white">
+    <p className="text-xs opacity-80">Votre voyage</p>
+    <h2 className="text-lg font-bold font-serif">Garden Route & Addo</h2>
+  </div>
 
-        <div className="absolute top-20 left-12">
-          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
-        </div>
+  {/* Points d'étape numérotés */}
+  <div className="absolute top-16 left-8">
+    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-lg text-xs font-bold text-[#E8A43A]">1</div>
+    <span className="text-[10px] font-bold text-white drop-shadow-lg block mt-1">Cape Town</span>
+  </div>
 
-        <div className="absolute top-24 right-32">
-          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
-        </div>
+  <div className="absolute top-24 left-20">
+    <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">2</div>
+  </div>
 
-        <div className="absolute top-16 right-24">
-          <div className="w-4 h-4 bg-[#E8A43A] rounded-full border-2 border-white shadow-lg"></div>
-          <span className="text-[10px] font-bold text-white drop-shadow-md">Knysna</span>
-        </div>
+  <div className="absolute top-28 left-14">
+    <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">3</div>
+  </div>
 
-        <div className="absolute top-12 right-12">
-          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
-        </div>
+  <div className="absolute top-24 right-28">
+    <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">4</div>
+  </div>
 
-        <div className="absolute top-8 right-4">
-          <div className="w-4 h-4 bg-[#5D7A3A] rounded-full border-2 border-white shadow-lg"></div>
-          <span className="text-[10px] font-bold text-white drop-shadow-md">Addo</span>
-        </div>
+  <div className="absolute top-16 right-20">
+    <div className="w-6 h-6 bg-[#E8A43A] rounded-full flex items-center justify-center shadow-lg text-xs font-bold text-white">5</div>
+    <span className="text-[10px] font-bold text-white drop-shadow-lg block mt-1">Knysna</span>
+  </div>
 
-        {/* Ligne de route pointillée */}
-        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200">
-          <path
-            d="M 30 50 Q 80 70 100 90 Q 140 120 200 100 Q 280 80 320 70 Q 360 55 385 50"
-            fill="none"
-            stroke="#E8A43A"
-            strokeWidth="3"
-            strokeDasharray="8 5"
-            strokeLinecap="round"
-          />
-        </svg>
+  <div className="absolute top-20 right-12">
+    <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">6</div>
+  </div>
 
-        {/* Badge distance */}
-        <div className="absolute bottom-3 left-3 bg-white/90 px-3 py-1 rounded-full shadow">
-          <span className="text-xs font-semibold text-[#3D2B1F]">~850 km • 10 jours</span>
-        </div>
+  <div className="absolute top-12 right-4">
+    <div className="w-6 h-6 bg-[#5D7A3A] rounded-full flex items-center justify-center shadow-lg text-xs font-bold text-white">7</div>
+    <span className="text-[10px] font-bold text-white drop-shadow-lg block mt-1">Addo</span>
+  </div>
 
-        {/* Dégradé bas */}
-        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent"></div>
-      </div>
+  {/* Ligne de route */}
+  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 250">
+    <path
+      d="M 45 100 Q 100 140 120 160 Q 160 170 240 140 Q 300 110 340 100 Q 370 85 390 75"
+      fill="none"
+      stroke="white"
+      strokeWidth="2"
+      strokeDasharray="6 4"
+      strokeLinecap="round"
+      opacity="0.8"
+    />
+  </svg>
 
-      {/* Info itinéraire */}
-      <div className="px-4 py-4">
-        <h2 className="text-xl font-bold text-[#3D2B1F] font-serif">Garden Route & Addo Park</h2>
-        <p className="text-sm text-[#A69580]">7 étapes inoubliables</p>
-      </div>
-
-      {/* Titre section */}
-      <div className="px-4 mb-3">
-        <h3 className="font-semibold text-[#3D2B1F]">Vos étapes</h3>
-      </div>
-
-      {/* Liste des étapes */}
-      <div className="px-4 space-y-2">
-        {etapes.map((etape) => (
-          <Link 
-            href={etape.nom === "Knysna" ? "/etape/knysna" : etape.nom === "Addo Park" ? "/etape/addo" : "#"}
-            key={etape.id} 
-            className={`flex items-center gap-3 p-3 rounded-xl shadow-sm ${
-              etape.nom === "Knysna" 
-                ? "bg-gradient-to-r from-[#FDF6E8] to-[#FFF8F0] border-2 border-[#E8A43A]" 
-                : "bg-white"
-            }`}
-          >
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xl ${
-              etape.nom === "Knysna" ? "bg-[#E8A43A]" : "bg-[#FDF6E8]"
-            }`}>
-              {etape.emoji}
-            </div>
-            <div className="flex-1">
-              <div className="flex items-center gap-2">
-                <span className="text-xs px-2 py-0.5 rounded-full bg-[#FDF6E8] text-[#8B4513]">
-                  {etape.jour}
-                </span>
-                <span className="font-semibold text-[#3D2B1F]">{etape.nom}</span>
-              </div>
-              <p className="text-xs text-[#A69580]">{etape.description}</p>
-            </div>
-            <span className="text-[#A69580]">›</span>
-          </Link>
-        ))}
-      </div>
+  {/* Badge distance */}
+  <div className="absolute bottom-3 left-3 bg-white/95 px-3 py-1.5 rounded-full shadow-lg">
+    <span className="text-xs font-bold text-[#3D2B1F]">🚐 ~850 km • 10 jours</span>
+  </div>
+</div>
 
       {/* Navbar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3">
