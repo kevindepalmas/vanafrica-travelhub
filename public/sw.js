@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vanafrica-v1';
+const CACHE_NAME = 'vanafrica-v2';
 const urlsToCache = [
   '/',
   '/accueil',
