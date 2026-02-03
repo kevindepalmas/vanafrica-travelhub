@@ -7,7 +7,7 @@ export default function AddoAfricanHome() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/partenaires" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F]">Partenaire</h1>
+        <h1 className="text-2xl font-bold text-[#3D2B1F] font-serif">Addo African Home</h1>
         <div className="flex gap-2">
           <span className="text-xl">↑</span>
           <span className="text-xl text-[#A69580]">♡</span>
@@ -15,7 +15,7 @@ export default function AddoAfricanHome() {
       </div>
 
     {/* Hero image */}
-<div className="h-56 bg-cover bg-center relative" style={{ backgroundImage: "url('/lodge.jpg')" }}>
+<div className="h-56 bg-cover bg-center relative" style={{ backgroundImage: "url('/lodge.jpg')", backgroundPosition: "center 40%" }}>
         {/* Dots carrousel */}
         <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
           <div className="w-2 h-2 rounded-full bg-white"></div>

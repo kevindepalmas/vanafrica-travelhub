@@ -7,7 +7,7 @@ export default function Partenaires() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-[#F5C45A] bg-[#FDF6E8]">
         <Link href="/accueil" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F]">Partenaires</h1>
+        <h1 className="font-bold text-[#3D2B1F] font-serif">Partenaires</h1>
         <span className="text-xl">🔍</span>
       </div>
 
@@ -15,7 +15,7 @@ export default function Partenaires() {
       <div className="px-4 py-4">
 
         {/* Titre */}
-        <h2 className="text-xl font-bold text-[#3D2B1F] mb-1">Vos avantages exclusifs</h2>
+        <h2 className="text-xl font-bold text-[#3D2B1F] mb-1 font-serif">Vos avantages exclusifs</h2>
         <p className="text-sm text-[#A69580] mb-4">Économisez avec nos partenaires sélectionnés</p>
 
         {/* Filtres */}

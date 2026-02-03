@@ -12,8 +12,8 @@ export default function Addo() {
       </div>
 
    {/* Hero image */}
-<div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('/addo.jpg')" }}>
-</div>
+      <div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('/addo.jpg')", backgroundPosition: "center 77%" }}>
+      </div>
 
       {/* Contenu */}
       <div className="px-4 py-4">
@@ -27,7 +27,7 @@ export default function Addo() {
         </div>
 
         {/* Titre */}
-        <h1 className="text-2xl font-bold text-[#3D2B1F] mb-1">ADDO PARK</h1>
+        <h1 className="text-2xl font-bold text-[#3D2B1F] mb-1 font-serif">ADDO PARK</h1>
         <p className="text-[#E8A43A] mb-4">Le royaume des éléphants</p>
 
         {/* Description */}

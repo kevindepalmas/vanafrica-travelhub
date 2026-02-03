@@ -17,17 +17,17 @@ import Link from "next/link";export default function Accueil() {
       <div className="px-4">
         
         {/* Bienvenue */}
-        <h1 className="text-2xl font-bold text-[#3D2B1F] mb-4">
+        <h1 className="text-2xl font-bold text-[#3D2B1F] mb-4 font-serif">
           Bienvenue Stéphane ! 👋
         </h1>
 
         {/* Hero Card */}
 <div className="rounded-2xl overflow-hidden shadow-lg mb-6">
-  <div className="h-32 bg-cover bg-center" style={{ backgroundImage: "url('/hero-garden-route.jpg')" }}>
+  <div className="h-32 bg-cover bg-center" style={{ backgroundImage: "url('/hero-garden-route.jpg')", backgroundPosition: "center 40%" }}>
   </div>
           <div className="bg-white p-4">
             <p className="text-sm text-[#A69580]">Votre aventure</p>
-            <h2 className="text-lg font-bold text-[#3D2B1F]">
+            <h2 className="text-lg font-bold text-[#3D2B1F] font-serif">
               GARDEN ROUTE CLASSIC
             </h2>
             <p className="text-sm text-[#8B4513]">10 jours • 7 étapes • ~850 km</p>

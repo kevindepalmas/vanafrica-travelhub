@@ -7,12 +7,12 @@ export default function Knysna() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/carte" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F]">Étapes</h1>
+        <h1 className="text-2xl font-bold text-[#3D2B1F] mb-1 font-serif">KNYSNA</h1>
         <span className="text-xl text-[#A69580]">♡</span>
       </div>
 
      {/* Hero image */}
-<div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('/knysna.jpg')" }}>
+<div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('/knysna.jpg')", backgroundPosition: "center 60%" }}>
 </div>
 
       {/* Contenu */}

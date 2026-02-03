@@ -5,7 +5,7 @@ import Link from "next/link";export default function Home() {
       {/* Header avec logo */}
       <div className="text-center pt-10 pb-6">
         <div className="text-6xl mb-3">🚐</div>
-        <h1 className="text-2xl font-bold text-[#8B4513]" style={{ fontFamily: 'serif' }}>
+        <h1 className="text-2xl font-bold text-[#8B4513] font-serif" style={{ fontFamily: 'serif' }}>
           Van&apos;Africa
         </h1>
         <p className="text-sm text-[#A69580]">African Van Life</p>
@@ -21,7 +21,7 @@ import Link from "next/link";export default function Home() {
         <p className="text-[#3D2B1F] mb-2">Bonjour Stéphane,</p>
         
         {/* Titre confirmation */}
-        <h2 className="text-xl font-bold text-[#E8A43A] mb-6" style={{ fontFamily: 'serif' }}>
+        <h2 className="text-xl font-bold text-[#E8A43A] font-serif" style={{ fontFamily: 'serif' }}>
           🎉 Votre réservation est confirmée !
         </h2>
 

@@ -17,7 +17,7 @@ export default function Carte() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/accueil" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F]">Mon itinéraire</h1>
+        <h1 className="font-bold text-[#3D2B1F] font-serif">Mon itinéraire</h1>
         <div className="w-6"></div>
       </div>
 
@@ -49,7 +49,7 @@ export default function Carte() {
 
       {/* Info itinéraire */}
       <div className="px-4 py-4">
-        <h2 className="text-xl font-bold text-[#3D2B1F]">Garden Route Classic</h2>
+        <h2 className="text-xl font-bold text-[#3D2B1F] font-serif">Garden Route Classic</h2>
         <p className="text-sm text-[#A69580]">10 jours • 7 étapes • ~850 km</p>
       </div>
 
