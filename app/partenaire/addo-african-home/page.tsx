@@ -8,10 +8,9 @@ export default function AddoAfricanHome() {
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/partenaires" className="text-2xl">←</Link>
         <h1 className="text-2xl font-bold text-[#3D2B1F] font-serif">Addo African Home</h1>
-        <div className="flex gap-2">
-          <span className="text-xl">↑</span>
-          <span className="text-xl text-[#A69580]">♡</span>
-        </div>
+        <button onClick={() => {}} className="text-2xl hover:scale-110 transition-transform">
+  🤍
+</button>
       </div>
 
     {/* Hero image */}

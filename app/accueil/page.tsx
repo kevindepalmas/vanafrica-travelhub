@@ -1,16 +1,19 @@
-import Link from "next/link";export default function Accueil() {
+import Link from "next/link";
+import Image from "next/image";
+
+export default function Accueil() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#FDF6E8] to-[#F5E6D3] pb-24">
       
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">🚐</span>
-          <span className="font-bold text-[#8B4513]">Van&apos;Africa</span>
+          <Image src="/icon-192.png" alt="Van'Africa" width={32} height={32} className="rounded-lg" />
+          <span className="font-bold text-[#8B4513] font-serif">Van&apos;Africa</span>
         </div>
-        <div className="bg-[#5D7A3A] text-white text-xs font-semibold px-3 py-1 rounded-full">
-          Offline ✓
-        </div>
+        <Link href="/favoris" className="text-2xl">
+          ♡
+        </Link>
       </div>
 
       {/* Contenu */}
@@ -22,13 +25,13 @@ import Link from "next/link";export default function Accueil() {
         </h1>
 
         {/* Hero Card */}
-<div className="rounded-2xl overflow-hidden shadow-lg mb-6">
-  <div className="h-32 bg-cover bg-center" style={{ backgroundImage: "url('/hero-garden-route.jpg')", backgroundPosition: "center 40%" }}>
-  </div>
+        <div className="rounded-2xl overflow-hidden shadow-lg mb-6">
+          <div className="h-32 bg-cover bg-center" style={{ backgroundImage: "url('/hero-garden-route.jpg')", backgroundPosition: "center 40%" }}>
+          </div>
           <div className="bg-white p-4">
             <p className="text-sm text-[#A69580]">Votre aventure</p>
             <h2 className="text-lg font-bold text-[#3D2B1F] font-serif">
-              GARDEN ROUTE CLASSIC
+              GARDEN ROUTE & ADDO PARK
             </h2>
             <p className="text-sm text-[#8B4513]">10 jours • 7 étapes • ~850 km</p>
           </div>
@@ -36,22 +39,22 @@ import Link from "next/link";export default function Accueil() {
 
         {/* Grille de navigation */}
         <div className="grid grid-cols-2 gap-3 mb-6">
-          <div className="bg-white p-4 rounded-xl shadow-sm text-center">
+          <Link href="/carte" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">🗺️</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2">Mon itinéraire</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl shadow-sm text-center">
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Mon itinéraire</p>
+          </Link>
+          <Link href="/carte" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">📍</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2">Étapes (7)</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl shadow-sm text-center">
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Étapes (7)</p>
+          </Link>
+          <Link href="/partenaires" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">⭐</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2">Partenaires (12)</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl shadow-sm text-center">
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Partenaires (12)</p>
+          </Link>
+          <Link href="/infos" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">📋</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2">Infos pratiques</p>
-          </div>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Infos pratiques</p>
+          </Link>
         </div>
 
         {/* Conseil du jour */}
@@ -69,7 +72,7 @@ import Link from "next/link";export default function Accueil() {
 
       </div>
 
-     {/* Navbar */}
+      {/* Navbar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3">
         <div className="flex justify-around">
           <div className="text-center">
