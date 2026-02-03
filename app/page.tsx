@@ -1,10 +1,10 @@
-import Link from "next/link";import Image from "next/image";export default function Home() {
+import Link from "next/link";export default function Home() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       
       {/* Header avec logo */}
       <div className="text-center pt-10 pb-6">
-        <Image src="/icon-192.png" alt="Van'Africa" width={80} height={80} className="mb-3 mx-auto" />
+        <img src="/icon-192.png" alt="Van'Africa" width={80} height={80} className="mb-3 mx-auto" />
         <h1 className="text-2xl font-bold text-[#8B4513] font-serif" style={{ fontFamily: 'serif' }}>
           Van&apos;Africa
         </h1>

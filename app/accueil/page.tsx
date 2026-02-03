@@ -1,5 +1,4 @@
 "use client";import Link from "next/link";
-import Image from "next/image";
 
 export default function Accueil() {
   return (
@@ -8,7 +7,7 @@ export default function Accueil() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4">
         <div className="flex items-center gap-2">
-          <Image src="/icon-192.png" alt="Van'Africa" width={32} height={32} className="rounded-lg" />
+          <img src="/icon-192.png" alt="Van'Africa" width={32} height={32} className="rounded-lg" />
           <span className="font-bold text-[#8B4513] font-serif">Van&apos;Africa</span>
         </div>
         <Link href="/favoris" className="text-2xl">
