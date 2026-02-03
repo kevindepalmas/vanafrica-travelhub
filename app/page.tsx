@@ -4,7 +4,7 @@ import Link from "next/link";import Image from "next/image";export default funct
       
       {/* Header avec logo */}
       <div className="text-center pt-10 pb-6">
-        <Image src="/icon-192.png" alt="Van'Africa" width={80} height={80} className="mb-3" />
+        <Image src="/icon-192.png" alt="Van'Africa" width={80} height={80} className="mb-3 mx-auto" />
         <h1 className="text-2xl font-bold text-[#8B4513] font-serif" style={{ fontFamily: 'serif' }}>
           Van&apos;Africa
         </h1>
