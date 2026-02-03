@@ -28,6 +28,17 @@ export default function RootLayout({
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#E8A43A" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
+    <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    `,
+  }}
+/>
   </head>
       <body className={`${playfair.variable} ${sourceSans.variable} font-sans antialiased bg-gray-100`}>
   <div className="max-w-md mx-auto bg-white min-h-screen shadow-xl">
