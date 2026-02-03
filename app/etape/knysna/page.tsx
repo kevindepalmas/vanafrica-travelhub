@@ -8,8 +8,14 @@ export default function Knysna() {
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/carte" className="text-2xl">←</Link>
         <h1 className="text-2xl font-bold text-[#3D2B1F] mb-1 font-serif">KNYSNA</h1>
-        <button onClick={() => {}} className="text-2xl hover:scale-110 transition-transform">
-  🤍
+        <button 
+  onClick={(e) => {
+    const btn = e.currentTarget;
+    btn.textContent = btn.textContent === '♡' ? '❤️' : '♡';
+  }} 
+  className="text-2xl hover:scale-110 transition-transform"
+>
+  ♡
 </button>
       </div>
 

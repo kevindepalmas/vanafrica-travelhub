@@ -8,9 +8,30 @@ export default function AddoAfricanHome() {
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/partenaires" className="text-2xl">←</Link>
         <h1 className="text-2xl font-bold text-[#3D2B1F] font-serif">Addo African Home</h1>
-        <button onClick={() => {}} className="text-2xl hover:scale-110 transition-transform">
-  🤍
+        <button 
+  onClick={(e) => {
+    const btn = e.currentTarget;
+    btn.textContent = btn.textContent === '♡' ? '❤️' : '♡';
+  }} 
+  className="text-2xl hover:scale-110 transition-transform"
+>
+  ♡
 </button>
+```
+
+**Sauvegarde** (`Cmd + S`)
+
+---
+
+## Déploie :
+```
+git add .
+```
+```
+git commit -m "Logo Van'Africa + coeurs cliquables style Instagram"
+```
+```
+git push
       </div>
 
     {/* Hero image */}
