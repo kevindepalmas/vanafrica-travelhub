@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Carte() {
@@ -21,36 +23,65 @@ export default function Carte() {
         <div className="w-6"></div>
       </div>
 
-      {/* Zone carte stylisée */}
-      <div className="h-48 bg-gradient-to-b from-[#E8F4FC] to-[#D4E8D4] relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-4xl">🗺️</div>
+      {/* Carte visuelle style Polarsteps */}
+      <div className="relative h-52 bg-gradient-to-br from-[#87CEEB] via-[#98D4BB] to-[#C2B280] overflow-hidden">
+        {/* Points d'étape sur la carte */}
+        <div className="absolute top-8 left-6">
+          <div className="w-4 h-4 bg-[#E8A43A] rounded-full border-2 border-white shadow-lg"></div>
+          <span className="text-[10px] font-bold text-white drop-shadow-md ml-1">CPT</span>
         </div>
-        {/* Ligne de route */}
+        
+        <div className="absolute top-12 left-16">
+          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
+        </div>
+
+        <div className="absolute top-20 left-12">
+          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
+        </div>
+
+        <div className="absolute top-24 right-32">
+          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
+        </div>
+
+        <div className="absolute top-16 right-24">
+          <div className="w-4 h-4 bg-[#E8A43A] rounded-full border-2 border-white shadow-lg"></div>
+          <span className="text-[10px] font-bold text-white drop-shadow-md">Knysna</span>
+        </div>
+
+        <div className="absolute top-12 right-12">
+          <div className="w-3 h-3 bg-[#CD6A32] rounded-full border-2 border-white shadow"></div>
+        </div>
+
+        <div className="absolute top-8 right-4">
+          <div className="w-4 h-4 bg-[#5D7A3A] rounded-full border-2 border-white shadow-lg"></div>
+          <span className="text-[10px] font-bold text-white drop-shadow-md">Addo</span>
+        </div>
+
+        {/* Ligne de route pointillée */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200">
           <path
-            d="M 40 100 Q 100 60 160 100 Q 220 140 280 100 Q 340 60 380 100"
+            d="M 30 50 Q 80 70 100 90 Q 140 120 200 100 Q 280 80 320 70 Q 360 55 385 50"
             fill="none"
             stroke="#E8A43A"
             strokeWidth="3"
-            strokeDasharray="8 4"
+            strokeDasharray="8 5"
+            strokeLinecap="round"
           />
-          <circle cx="40" cy="100" r="8" fill="#E8A43A" />
-          <circle cx="160" cy="100" r="6" fill="#CD6A32" />
-          <circle cx="280" cy="100" r="6" fill="#CD6A32" />
-          <circle cx="380" cy="100" r="8" fill="#E8A43A" />
         </svg>
-        {/* Labels */}
-        <div className="absolute top-4 left-8 text-xs font-bold text-[#3D2B1F]">CPT</div>
-        <div className="absolute top-4 right-8 text-xs font-bold text-[#3D2B1F]">ADDO</div>
+
+        {/* Badge distance */}
+        <div className="absolute bottom-3 left-3 bg-white/90 px-3 py-1 rounded-full shadow">
+          <span className="text-xs font-semibold text-[#3D2B1F]">~850 km • 10 jours</span>
+        </div>
+
         {/* Dégradé bas */}
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent"></div>
       </div>
 
       {/* Info itinéraire */}
       <div className="px-4 py-4">
-        <h2 className="text-xl font-bold text-[#3D2B1F] font-serif">Garden Route Classic</h2>
-        <p className="text-sm text-[#A69580]">10 jours • 7 étapes • ~850 km</p>
+        <h2 className="text-xl font-bold text-[#3D2B1F] font-serif">Garden Route & Addo Park</h2>
+        <p className="text-sm text-[#A69580]">7 étapes inoubliables</p>
       </div>
 
       {/* Titre section */}
