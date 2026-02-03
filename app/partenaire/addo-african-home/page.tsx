@@ -17,21 +17,6 @@ export default function AddoAfricanHome() {
 >
   ♡
 </button>
-```
-
-**Sauvegarde** (`Cmd + S`)
-
----
-
-## Déploie :
-```
-git add .
-```
-```
-git commit -m "Logo Van'Africa + coeurs cliquables style Instagram"
-```
-```
-git push
       </div>
 
     {/* Hero image */}
