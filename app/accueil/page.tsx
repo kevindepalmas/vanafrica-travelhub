@@ -1,4 +1,4 @@
-"use client";
+"use client";import HeartButton from "@/app/components/HeartButton";
 
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export default function Accueil() {
         <div className="flex items-center gap-2">
           <img src="/logo-vanafrica.png" alt="Van'Africa" width={40} height={40} />
         </div>
-        <Link href="/favoris" className="text-2xl">♡</Link>
+        <HeartButton />
       </div>
 
       {/* Contenu */}

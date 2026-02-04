@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "next/link";import BackButton from "@/app/components/BackButton";
 
 export default function Inspiration() {
   const itineraires = [
@@ -38,7 +38,7 @@ export default function Inspiration() {
       
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
-        <Link href="/accueil" className="text-2xl">←</Link>
+        <BackButton />
         <h1 className="font-bold text-[#3D2B1F] font-serif">Besoin d'inspiration ?</h1>
         <div className="w-6"></div>
       </div>

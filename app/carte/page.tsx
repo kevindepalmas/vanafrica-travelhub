@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import BackButton from "@/app/components/BackButton";
 
 mapboxgl.accessToken = "pk.eyJ1Ijoia2V2aW5kZXBhbG1hcyIsImEiOiJjbWw3cm5ndzgwbHk2M2VzMmEyOTZrcXJqIn0.vD9dmUOpRgqX4Qc7CgO1bQ";
 
@@ -102,7 +103,7 @@ new mapboxgl.Marker(el)
       
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
-        <Link href="/accueil" className="text-2xl">←</Link>
+        <BackButton />
         <h1 className="font-bold text-[#3D2B1F] font-serif">Mon itinéraire</h1>
         <div className="w-6"></div>
       </div>

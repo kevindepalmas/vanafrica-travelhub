@@ -1,4 +1,4 @@
-import HeartButton from "@/app/components/HeartButton";"use client";import Link from "next/link";
+"use client";import HeartButton from "@/app/components/HeartButton";import Link from "next/link";import BackButton from "@/app/components/BackButton";
 
 export default function Knysna() {
   return (
@@ -6,7 +6,7 @@ export default function Knysna() {
       
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
-        <Link href="/carte" className="text-2xl">←</Link>
+        <BackButton />
         <h1 className="text-2xl font-bold text-[#3D2B1F] mb-1 font-serif">KNYSNA</h1>
         <HeartButton />
       </div>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link";import BackButton from "@/app/components/BackButton";
 
 export default function Partenaires() {
   return (
@@ -6,7 +6,7 @@ export default function Partenaires() {
       
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-[#F5C45A] bg-[#FDF6E8]">
-        <Link href="/accueil" className="text-2xl">←</Link>
+        <BackButton />
         <h1 className="font-bold text-[#3D2B1F] font-serif">Partenaires</h1>
         <span className="text-xl">🔍</span>
       </div>
