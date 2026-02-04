@@ -1,11 +1,13 @@
-import Link from "next/link";export default function Home() {
+import Link from "next/link";
+
+export default function Home() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       
       {/* Header avec logo */}
       <div className="text-center pt-10 pb-6">
         <img src="/icon-192.png" alt="Van'Africa" width={80} height={80} className="mb-3 mx-auto" />
-        <h1 className="text-2xl font-bold text-[#8B4513] font-serif" style={{ fontFamily: 'serif' }}>
+        <h1 className="text-2xl font-bold text-[#8B4513] font-serif">
           Van&apos;Africa
         </h1>
         <p className="text-sm text-[#A69580]">African Van Life</p>
@@ -21,7 +23,7 @@ import Link from "next/link";export default function Home() {
         <p className="text-[#3D2B1F] mb-2">Bonjour Stéphane,</p>
         
         {/* Titre confirmation */}
-        <h2 className="text-xl font-bold text-[#E8A43A] font-serif" style={{ fontFamily: 'serif' }}>
+        <h2 className="text-xl font-bold text-[#E8A43A] mb-6 font-serif">
           🎉 Votre réservation est confirmée !
         </h2>
 
@@ -45,6 +47,26 @@ import Link from "next/link";export default function Home() {
           </div>
         </div>
 
+        {/* Vidéo "How it works" - Placeholder */}
+        <div className="mb-6">
+          <p className="text-sm font-semibold text-[#3D2B1F] mb-2">Comment ça marche ?</p>
+          <div className="relative bg-gradient-to-br from-[#3D2B1F] to-[#5D4A3A] rounded-xl h-44 flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity">
+            {/* Icône Play */}
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#E8A43A] rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-2xl ml-1">▶</span>
+              </div>
+            </div>
+            {/* Durée */}
+            <div className="absolute bottom-3 right-3 bg-black/50 px-2 py-1 rounded text-xs text-white">
+              1:30
+            </div>
+          </div>
+          <p className="text-xs text-[#A69580] mt-2 text-center">
+            Découvrez votre Travel Hub en 90 secondes
+          </p>
+        </div>
+
         {/* Box "Préparez votre aventure" */}
         <div className="bg-gradient-to-r from-[#FDF6E8] to-[#FFF8F0] p-4 rounded-xl border-l-4 border-[#E8A43A] mb-6">
           <h3 className="font-semibold text-[#3D2B1F] mb-1">Préparez votre aventure !</h3>
@@ -55,9 +77,9 @@ import Link from "next/link";export default function Home() {
         </div>
 
         {/* Bouton CTA */}
-<Link href="/accueil" className="block w-full py-4 rounded-xl font-semibold text-white shadow-lg bg-gradient-to-r from-[#F5C45A] via-[#E8A43A] to-[#CD6A32] text-center">
-  🧭 OUVRIR LE TRAVEL HUB
-</Link>
+        <Link href="/accueil" className="block w-full py-4 rounded-xl font-semibold text-white shadow-lg bg-gradient-to-r from-[#F5C45A] via-[#E8A43A] to-[#CD6A32] text-center">
+          🧭 OUVRIR LE TRAVEL HUB
+        </Link>
 
       </div>
 

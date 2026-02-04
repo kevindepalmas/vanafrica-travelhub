@@ -1,4 +1,6 @@
-"use client";import Link from "next/link";
+"use client";
+
+import Link from "next/link";
 
 export default function Accueil() {
   return (
@@ -10,9 +12,7 @@ export default function Accueil() {
           <img src="/icon-192.png" alt="Van'Africa" width={32} height={32} className="rounded-lg" />
           <span className="font-bold text-[#8B4513] font-serif">Van&apos;Africa</span>
         </div>
-        <Link href="/favoris" className="text-2xl">
-          ♡
-        </Link>
+        <Link href="/favoris" className="text-2xl">♡</Link>
       </div>
 
       {/* Contenu */}
@@ -25,34 +25,35 @@ export default function Accueil() {
 
         {/* Hero Card */}
         <div className="rounded-2xl overflow-hidden shadow-lg mb-6">
-          <div className="h-32 bg-cover bg-center" style={{ backgroundImage: "url('/hero-garden-route.jpg')", backgroundPosition: "center 40%" }}>
-          </div>
+          <div className="h-32 bg-cover bg-center" style={{ backgroundImage: "url('/hero-garden-route.jpg')", backgroundPosition: "center 40%" }}></div>
           <div className="bg-white p-4">
             <p className="text-sm text-[#A69580]">Votre aventure</p>
-            <h2 className="text-lg font-bold text-[#3D2B1F] font-serif">
-              GARDEN ROUTE & ADDO PARK
-            </h2>
+            <h2 className="text-lg font-bold text-[#3D2B1F] font-serif">GARDEN ROUTE & ADDO PARK</h2>
             <p className="text-sm text-[#8B4513]">10 jours • 7 étapes • ~850 km</p>
           </div>
         </div>
 
-        {/* Grille de navigation */}
+        {/* Nav-grid 4 boutons */}
         <div className="grid grid-cols-2 gap-3 mb-6">
-          <Link href="/carte" className="bg-white p-4 rounded-xl shadow-sm text-center">
+          <Link href="/journey" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">🗺️</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Mon itinéraire</p>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Your Journey</p>
+            <p className="text-xs text-[#A69580]">Mon itinéraire</p>
           </Link>
-          <Link href="/carte" className="bg-white p-4 rounded-xl shadow-sm text-center">
-            <span className="text-3xl">📍</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Étapes (7)</p>
+          <Link href="/places" className="bg-white p-4 rounded-xl shadow-sm text-center">
+            <span className="text-3xl">✅</span>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Places We Approve</p>
+            <p className="text-xs text-[#A69580]">Nos partenaires</p>
           </Link>
-          <Link href="/partenaires" className="bg-white p-4 rounded-xl shadow-sm text-center">
-            <span className="text-3xl">⭐</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Partenaires (12)</p>
+          <Link href="/travel-your-way" className="bg-white p-4 rounded-xl shadow-sm text-center">
+            <span className="text-3xl">🧭</span>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Travel Your Way</p>
+            <p className="text-xs text-[#A69580]">Composez votre itinéraire</p>
           </Link>
-          <Link href="/infos" className="bg-white p-4 rounded-xl shadow-sm text-center">
-            <span className="text-3xl">📋</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Infos pratiques</p>
+          <Link href="/inspiration" className="bg-white p-4 rounded-xl shadow-sm text-center">
+            <span className="text-3xl">💡</span>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Need Inspiration?</p>
+            <p className="text-xs text-[#A69580]">Idées de voyages</p>
           </Link>
         </div>
 
@@ -68,7 +69,6 @@ export default function Accueil() {
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Navbar */}
@@ -82,7 +82,7 @@ export default function Accueil() {
             <span className="text-2xl">🗺️</span>
             <p className="text-xs text-[#A69580]">Carte</p>
           </Link>
-          <Link href="/partenaires" className="text-center">
+          <Link href="/places" className="text-center">
             <span className="text-2xl">⭐</span>
             <p className="text-xs text-[#A69580]">Partenaires</p>
           </Link>
@@ -92,7 +92,6 @@ export default function Accueil() {
           </Link>
         </div>
       </div>
-
     </div>
   );
 }
