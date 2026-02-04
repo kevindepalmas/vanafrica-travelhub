@@ -1,17 +1,93 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+
+mapboxgl.accessToken = "pk.eyJ1Ijoia2V2aW5kZXBhbG1hcyIsImEiOiJjbWw3cm5ndzgwbHk2M2VzMmEyOTZrcXJqIn0.vD9dmUOpRgqX4Qc7CgO1bQ";
 
 export default function Carte() {
+  const mapContainer = useRef<HTMLDivElement>(null);
+  const map = useRef<mapboxgl.Map | null>(null);
+
   const etapes = [
-    { id: 1, jour: "J1-2", emoji: "🏔️", nom: "Cape Town", description: "Départ & Muizenberg" },
-    { id: 2, jour: "J2", emoji: "🍷", nom: "Stellenbosch", description: "Route des vins" },
-    { id: 3, jour: "J3", emoji: "🐋", nom: "Hermanus", description: "Baleines" },
-    { id: 4, jour: "J4-5", emoji: "🌿", nom: "Wilderness", description: "Nature sauvage" },
-    { id: 5, jour: "J6-7", emoji: "🦪", nom: "Knysna", description: "Gastronomie" },
-    { id: 6, jour: "J8", emoji: "🏙️", nom: "Port Elizabeth", description: "Ville côtière" },
-    { id: 7, jour: "J9-10", emoji: "🐘", nom: "Addo Park", description: "Safari Big Five" },
+    { id: 1, jour: "J1-2", emoji: "🏔️", nom: "Cape Town", description: "Départ & Muizenberg", lat: -33.9249, lng: 18.4241 },
+    { id: 2, jour: "J2", emoji: "🍷", nom: "Stellenbosch", description: "Route des vins", lat: -33.9346, lng: 18.8600 },
+    { id: 3, jour: "J3", emoji: "🐋", nom: "Hermanus", description: "Baleines", lat: -34.4187, lng: 19.2345 },
+    { id: 4, jour: "J4-5", emoji: "🌿", nom: "Wilderness", description: "Nature sauvage", lat: -33.9910, lng: 22.5806 },
+    { id: 5, jour: "J6-7", emoji: "🦪", nom: "Knysna", description: "Gastronomie", lat: -34.0356, lng: 23.0488 },
+    { id: 6, jour: "J8", emoji: "🏙️", nom: "Port Elizabeth", description: "Ville côtière", lat: -33.9608, lng: 25.6022 },
+    { id: 7, jour: "J9-10", emoji: "🐘", nom: "Addo Park", description: "Safari Big Five", lat: -33.4543, lng: 25.7679 },
   ];
+
+  useEffect(() => {
+    if (map.current || !mapContainer.current) return;
+
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: "mapbox://styles/mapbox/outdoors-v12",
+      center: [22.5, -33.8],
+      zoom: 5.5,
+    });
+
+    map.current.on("load", () => {
+      // Ajouter la ligne de route
+      map.current!.addSource("route", {
+        type: "geojson",
+        data: {
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "LineString",
+            coordinates: etapes.map((e) => [e.lng, e.lat]),
+          },
+        },
+      });
+
+      map.current!.addLayer({
+        id: "route-line",
+        type: "line",
+        source: "route",
+        paint: {
+          "line-color": "#E8A43A",
+          "line-width": 3,
+          "line-dasharray": [2, 1],
+        },
+      });
+
+      // Ajouter les marqueurs
+      etapes.forEach((etape) => {
+        const el = document.createElement("div");
+        el.className = "marker";
+        el.style.width = "32px";
+        el.style.height = "32px";
+        el.style.borderRadius = "50%";
+        el.style.display = "flex";
+        el.style.alignItems = "center";
+        el.style.justifyContent = "center";
+        el.style.fontWeight = "bold";
+        el.style.fontSize = "14px";
+        el.style.cursor = "pointer";
+        el.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+        
+        if (etape.id === 1 || etape.id === 5 || etape.id === 7) {
+          el.style.backgroundColor = "#E8A43A";
+          el.style.color = "white";
+        } else {
+          el.style.backgroundColor = "white";
+          el.style.color = "#8B4513";
+          el.style.border = "2px solid #E8A43A";
+        }
+        
+        el.textContent = String(etape.id);
+
+        new mapboxgl.Marker(el)
+          .setLngLat([etape.lng, etape.lat])
+          .addTo(map.current!);
+      });
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-white pb-24">
@@ -23,70 +99,12 @@ export default function Carte() {
         <div className="w-6"></div>
       </div>
 
-      {/* Carte visuelle style Polarsteps */}
-      <div className="relative h-64 overflow-hidden">
-        {/* Image de fond carte */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/map-garden-route.jpg')" }}
-        ></div>
+      {/* Carte Mapbox */}
+      <div className="relative h-64">
+        <div ref={mapContainer} className="w-full h-full" />
         
-        {/* Overlay sombre pour lisibilité */}
-        <div className="absolute inset-0 bg-black/30"></div>
-        
-        {/* Titre du voyage */}
-        <div className="absolute top-4 left-4 text-white">
-          <p className="text-xs opacity-80">Votre voyage</p>
-          <h2 className="text-lg font-bold font-serif">Garden Route & Addo</h2>
-        </div>
-
-        {/* Points d'étape numérotés */}
-        <div className="absolute top-16 left-8">
-          <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-lg text-xs font-bold text-[#E8A43A]">1</div>
-          <span className="text-[10px] font-bold text-white drop-shadow-lg block mt-1">Cape Town</span>
-        </div>
-
-        <div className="absolute top-24 left-20">
-          <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">2</div>
-        </div>
-
-        <div className="absolute top-28 left-14">
-          <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">3</div>
-        </div>
-
-        <div className="absolute top-24 right-28">
-          <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">4</div>
-        </div>
-
-        <div className="absolute top-16 right-20">
-          <div className="w-6 h-6 bg-[#E8A43A] rounded-full flex items-center justify-center shadow-lg text-xs font-bold text-white">5</div>
-          <span className="text-[10px] font-bold text-white drop-shadow-lg block mt-1">Knysna</span>
-        </div>
-
-        <div className="absolute top-20 right-12">
-          <div className="w-5 h-5 bg-white/80 rounded-full flex items-center justify-center shadow text-xs font-bold text-[#8B4513]">6</div>
-        </div>
-
-        <div className="absolute top-12 right-4">
-          <div className="w-6 h-6 bg-[#5D7A3A] rounded-full flex items-center justify-center shadow-lg text-xs font-bold text-white">7</div>
-          <span className="text-[10px] font-bold text-white drop-shadow-lg block mt-1">Addo</span>
-        </div>
-
-        {/* Ligne de route */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 250">
-          <path
-            d="M 45 100 Q 100 140 120 160 Q 160 170 240 140 Q 300 110 340 100 Q 370 85 390 75"
-            fill="none"
-            stroke="white"
-            strokeWidth="2"
-            strokeDasharray="6 4"
-            strokeLinecap="round"
-            opacity="0.8"
-          />
-        </svg>
-
         {/* Badge distance */}
-        <div className="absolute bottom-3 left-3 bg-white/95 px-3 py-1.5 rounded-full shadow-lg">
+        <div className="absolute bottom-3 left-3 bg-white/95 px-3 py-1.5 rounded-full shadow-lg z-10">
           <span className="text-xs font-bold text-[#3D2B1F]">🚐 ~850 km • 10 jours</span>
         </div>
       </div>
@@ -105,18 +123,20 @@ export default function Carte() {
       {/* Liste des étapes */}
       <div className="px-4 space-y-2">
         {etapes.map((etape) => (
-          <Link 
+          <Link
             href={etape.nom === "Knysna" ? "/etape/knysna" : etape.nom === "Addo Park" ? "/etape/addo" : "#"}
-            key={etape.id} 
+            key={etape.id}
             className={`flex items-center gap-3 p-3 rounded-xl shadow-sm ${
-              etape.nom === "Knysna" 
-                ? "bg-gradient-to-r from-[#FDF6E8] to-[#FFF8F0] border-2 border-[#E8A43A]" 
+              etape.nom === "Knysna"
+                ? "bg-gradient-to-r from-[#FDF6E8] to-[#FFF8F0] border-2 border-[#E8A43A]"
                 : "bg-white"
             }`}
           >
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xl ${
-              etape.nom === "Knysna" ? "bg-[#E8A43A]" : "bg-[#FDF6E8]"
-            }`}>
+            <div
+              className={`w-10 h-10 rounded-full flex items-center justify-center text-xl ${
+                etape.nom === "Knysna" ? "bg-[#E8A43A]" : "bg-[#FDF6E8]"
+              }`}
+            >
               {etape.emoji}
             </div>
             <div className="flex-1">
@@ -154,7 +174,6 @@ export default function Carte() {
           </Link>
         </div>
       </div>
-
     </div>
   );
 }
