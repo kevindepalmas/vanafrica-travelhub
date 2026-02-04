@@ -17,7 +17,7 @@ export default function Places() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-[#F5C45A] bg-[#FDF6E8]">
         <Link href="/accueil" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F] font-serif">Places We Approve</h1>
+        <h1 className="font-bold text-[#3D2B1F] font-serif">Nos partenaires</h1>
         <div className="w-6"></div>
       </div>
 
@@ -27,9 +27,7 @@ export default function Places() {
         {/* Titre avec tampon */}
         <div className="flex items-center gap-3 mb-2">
           <h2 className="text-xl font-bold text-[#3D2B1F] font-serif">Nos partenaires</h2>
-          <div className="bg-[#E8A43A] text-white text-xs font-bold px-2 py-1 rounded transform -rotate-3">
-            ✓ APPROVED
-          </div>
+          <img src="/va-approved.png" alt="Van'Africa Approved" width={50} height={50} className="transform -rotate-6" />
         </div>
         <p className="text-sm text-[#A69580] mb-6">
           Testés et approuvés par Van&apos;Africa. Réductions exclusives.

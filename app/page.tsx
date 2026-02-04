@@ -6,12 +6,8 @@ export default function Home() {
       
       {/* Header avec logo */}
       <div className="text-center pt-10 pb-6">
-        <img src="/icon-192.png" alt="Van'Africa" width={80} height={80} className="mb-3 mx-auto" />
-        <h1 className="text-2xl font-bold text-[#8B4513] font-serif">
-          Van&apos;Africa
-        </h1>
-        <p className="text-sm text-[#A69580]">African Van Life</p>
-      </div>
+        <img src="/logo-vanafrica.png" alt="Van'Africa" width={120} height={120} className="mb-3 mx-auto" />
+        </div>
 
       {/* Ligne de séparation */}
       <div className="mx-6 border-t-2 border-[#F5C45A]"></div>

@@ -6,16 +6,16 @@ export default function Inspiration() {
   const itineraires = [
     {
       id: 1,
-      nom: "Garden Route Classic",
+      nom: "Garden Route & Addo Park",
       jours: 10,
       km: 850,
-      description: "Le grand classique : Cape Town → Addo via la côte",
+      description: "Le grand classique : Cape Town → Addo Park via la côte",
       emoji: "🌊",
-      etapes: ["Cape Town", "Stellenbosch", "Hermanus", "Wilderness", "Knysna", "Addo"],
+      etapes: ["Cape Town", "Stellenbosch", "Hermanus", "Wilderness", "Knysna", "Addo Park"],
     },
     {
       id: 2,
-      nom: "Wine & Coast",
+      nom: "Vignobles & Routes cotières",
       jours: 7,
       km: 400,
       description: "Vignobles et plages, sans se presser",
@@ -24,12 +24,12 @@ export default function Inspiration() {
     },
     {
       id: 3,
-      nom: "Safari & Beach",
+      nom: "Safari & Plages",
       jours: 14,
       km: 1200,
       description: "Le meilleur des deux mondes",
       emoji: "🦁",
-      etapes: ["Cape Town", "Garden Route", "Addo", "Wild Coast"],
+      etapes: ["Cape Town", "Garden Route", "Addo Park", "Côte sauvage"],
     },
   ];
 
@@ -39,14 +39,14 @@ export default function Inspiration() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/accueil" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F] font-serif">Need Inspiration?</h1>
+        <h1 className="font-bold text-[#3D2B1F] font-serif">Besoin d'inspiration ?</h1>
         <div className="w-6"></div>
       </div>
 
       {/* Contenu */}
       <div className="px-4 py-6">
         
-        <h2 className="text-xl font-bold text-[#3D2B1F] mb-2 font-serif">Itinéraires tout faits</h2>
+        <h2 className="text-xl font-bold text-[#3D2B1F] mb-2 font-serif">Nos itinéraires incontournables</h2>
         <p className="text-sm text-[#A69580] mb-6">
           Inspirez-vous de nos routes signatures, testées et approuvées.
         </p>

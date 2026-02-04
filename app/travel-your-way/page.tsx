@@ -9,7 +9,7 @@ export default function TravelYourWay() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/accueil" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F] font-serif">Travel Your Way</h1>
+        <h1 className="font-bold text-[#3D2B1F] font-serif">Composez votre itinéraire</h1>
         <div className="w-6"></div>
       </div>
 
@@ -20,8 +20,8 @@ export default function TravelYourWay() {
 
         {/* Bloc 1: Your Travel Frame */}
         <div className="bg-gradient-to-r from-[#FDF6E8] to-[#FFF8F0] p-5 rounded-xl border-2 border-[#E8A43A]">
-          <h3 className="font-bold text-[#E8A43A] mb-3 font-serif">📋 Your Travel Frame</h3>
-          <p className="text-sm text-[#A69580] mb-4">Le socle de votre voyage. Factuel. Non négociable.</p>
+          <h3 className="font-bold text-[#E8A43A] mb-3 font-serif">📋 Votre cadre de voyage</h3>
+          <p className="text-sm text-[#A69580] mb-4">Le socle de votre voyage.</p>
           
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
@@ -37,7 +37,7 @@ export default function TravelYourWay() {
               <span className="font-semibold text-[#3D2B1F]">10 jours</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#A69580]">Conduite/jour</span>
+              <span className="text-[#A69580]">Temps de conduite</span>
               <span className="font-semibold text-[#3D2B1F]">2-4h (recommandé)</span>
             </div>
           </div>
@@ -45,41 +45,41 @@ export default function TravelYourWay() {
 
         {/* Bloc 2: Ways to Travel */}
         <div className="bg-white p-5 rounded-xl border border-gray-200">
-          <h3 className="font-bold text-[#3D2B1F] mb-3 font-serif">🌍 Ways to Travel</h3>
-          <p className="text-sm text-[#A69580] mb-4">Inspiration, pas décision. Explorez les possibilités.</p>
+          <h3 className="font-bold text-[#3D2B1F] mb-3 font-serif">🌍 Ambiances de votre voyage</h3>
+          <p className="text-sm text-[#A69580] mb-4">Explorez les possibilités.</p>
           
           <div className="grid grid-cols-2 gap-2">
             <button className="p-3 bg-[#FDF6E8] rounded-lg text-left hover:bg-[#F5E6D3] transition-colors">
               <span className="text-xl">🏖️</span>
-              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">Ocean & Wild Beaches</p>
+              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">Plages & Océan</p>
             </button>
             <button className="p-3 bg-[#FDF6E8] rounded-lg text-left hover:bg-[#F5E6D3] transition-colors">
               <span className="text-xl">🍷</span>
-              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">Wineries & Slow Living</p>
+              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">Vignobles & Slow travel</p>
             </button>
             <button className="p-3 bg-[#FDF6E8] rounded-lg text-left hover:bg-[#F5E6D3] transition-colors">
               <span className="text-xl">🦁</span>
-              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">National Parks & Wildlife</p>
+              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">Parcs nationaux & Safaris</p>
             </button>
             <button className="p-3 bg-[#FDF6E8] rounded-lg text-left hover:bg-[#F5E6D3] transition-colors">
               <span className="text-xl">🛣️</span>
-              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">Iconic Road Trips</p>
+              <p className="text-xs font-semibold text-[#3D2B1F] mt-1">Road-trips iconiques</p>
             </button>
           </div>
         </div>
 
         {/* Bloc 3: Time-Based Suggestions */}
         <div className="bg-white p-5 rounded-xl border border-gray-200">
-          <h3 className="font-bold text-[#3D2B1F] mb-3 font-serif">⏱️ How do you want to travel?</h3>
-          <p className="text-sm text-[#A69580] mb-4">Zéro friction. On respecte tous les profils.</p>
+          <h3 className="font-bold text-[#3D2B1F] mb-3 font-serif">⏱️ Comment voulez-vous voyager ?</h3>
+          <p className="text-sm text-[#A69580] mb-4">Déjà des idées ?</p>
           
           <div className="space-y-2">
             <button className="w-full p-4 bg-green-50 border-2 border-green-200 rounded-xl text-left hover:bg-green-100 transition-colors">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">🟢</span>
                 <div>
-                  <p className="font-semibold text-[#3D2B1F]">No plan yet</p>
-                  <p className="text-xs text-[#A69580]">We&apos;ll guide you day by day.</p>
+                  <p className="font-semibold text-[#3D2B1F]">Aucune idée</p>
+                  <p className="text-xs text-[#A69580]">On vous guide jour après jour.</p>
                 </div>
               </div>
             </button>
@@ -87,8 +87,8 @@ export default function TravelYourWay() {
               <div className="flex items-center gap-3">
                 <span className="text-2xl">🟡</span>
                 <div>
-                  <p className="font-semibold text-[#3D2B1F]">Rough idea</p>
-                  <p className="text-xs text-[#A69580]">We&apos;ll shape it together.</p>
+                  <p className="font-semibold text-[#3D2B1F]">Une vague idée</p>
+                  <p className="text-xs text-[#A69580]">Construisons ensemble.</p>
                 </div>
               </div>
             </button>
@@ -96,8 +96,8 @@ export default function TravelYourWay() {
               <div className="flex items-center gap-3">
                 <span className="text-2xl">🔵</span>
                 <div>
-                  <p className="font-semibold text-[#3D2B1F]">Fixed plan</p>
-                  <p className="text-xs text-[#A69580]">We&apos;ll optimise it.</p>
+                  <p className="font-semibold text-[#3D2B1F]">Une idée précise</p>
+                  <p className="text-xs text-[#A69580]">Optimisons-le.</p>
                 </div>
               </div>
             </button>
@@ -106,25 +106,24 @@ export default function TravelYourWay() {
 
         {/* Bloc 4: What We Handle */}
         <div className="bg-white p-5 rounded-xl border border-gray-200">
-          <h3 className="font-bold text-[#3D2B1F] mb-3 font-serif">🤝 What We Handle (vs. You)</h3>
-          <p className="text-sm text-[#A69580] mb-4">On vend la sécurité, sans enlever la liberté.</p>
+          <h3 className="font-bold text-[#3D2B1F] mb-3 font-serif">🤝 On s'occupe de tout !</h3>
           
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <p className="font-semibold text-[#5D7A3A] mb-2 text-sm">✓ We handle:</p>
+              <p className="font-semibold text-[#5D7A3A] mb-2 text-sm">✓ On gère :</p>
               <ul className="text-xs text-[#A69580] space-y-1">
-                <li>• Tested places</li>
-                <li>• Realistic driving times</li>
-                <li>• Van-friendly stops</li>
-                <li>• Local partners</li>
+                <li>• Hébergements et activités testés</li>
+                <li>• Temps de trajet réalistes</li>
+                <li>• Arrêts "Van-friendly"</li>
+                <li>• Partenaires locaux</li>
               </ul>
             </div>
             <div>
-              <p className="font-semibold text-[#E8A43A] mb-2 text-sm">★ You decide:</p>
+              <p className="font-semibold text-[#E8A43A] mb-2 text-sm">★ Vous décidez :</p>
               <ul className="text-xs text-[#A69580] space-y-1">
-                <li>• When to stop</li>
-                <li>• How long to stay</li>
-                <li>• What to skip</li>
+                <li>• Quand vous arrêter</li>
+                <li>• Combien de temps vous restez</li>
+                <li>• Ce que vous voulez éviter</li>
               </ul>
             </div>
           </div>
@@ -133,8 +132,8 @@ export default function TravelYourWay() {
         {/* Citation */}
         <div className="text-center py-4">
           <p className="text-sm italic text-[#A69580]">
-            &quot;No fixed itinerary. No pressure.<br/>
-            Your journey will take shape once you&apos;re on the road.&quot;
+            &quot;Pas d'itinéraire fixe. Pas de pression.<br/>
+            Votre voyage prendra forme sur la route !&quot;
           </p>
         </div>
 

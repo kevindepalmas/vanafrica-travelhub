@@ -9,7 +9,7 @@ export default function Journey() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
         <Link href="/accueil" className="text-2xl">←</Link>
-        <h1 className="font-bold text-[#3D2B1F] font-serif">Your Journey</h1>
+        <h1 className="font-bold text-[#3D2B1F] font-serif">Votre voyage</h1>
         <div className="w-6"></div>
       </div>
 
@@ -17,34 +17,33 @@ export default function Journey() {
       <div className="px-4 py-6">
         
         <h2 className="text-xl font-bold text-[#3D2B1F] mb-2 font-serif">Mon itinéraire</h2>
-        <p className="text-sm text-[#A69580] mb-6">Votre cadre de voyage</p>
 
         {/* Travel Frame */}
         <div className="bg-gradient-to-r from-[#FDF6E8] to-[#FFF8F0] p-5 rounded-xl border-2 border-[#E8A43A] mb-6">
-          <h3 className="font-bold text-[#E8A43A] mb-4 font-serif">🚐 Your Travel Frame</h3>
+          <h3 className="font-bold text-[#E8A43A] mb-4 font-serif">🚐 Votre cadre de voyage</h3>
           
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <span className="text-sm text-[#A69580]">Pick-up location</span>
-              <span className="font-semibold text-[#3D2B1F]">Cape Town Airport</span>
+              <span className="font-semibold text-[#3D2B1F]">Aéroport de Cape Town</span>
             </div>
             <div className="border-t border-[#E8A43A]/30"></div>
             
             <div className="flex items-center justify-between">
               <span className="text-sm text-[#A69580]">Drop-off location</span>
-              <span className="font-semibold text-[#3D2B1F]">Cape Town Airport</span>
+              <span className="font-semibold text-[#3D2B1F]">Aéroport de Cape Town</span>
             </div>
             <div className="border-t border-[#E8A43A]/30"></div>
             
             <div className="flex items-center justify-between">
-              <span className="text-sm text-[#A69580]">Duration</span>
-              <span className="font-semibold text-[#3D2B1F]">10 days</span>
+              <span className="text-sm text-[#A69580]">Durée</span>
+              <span className="font-semibold text-[#3D2B1F]">10 jours</span>
             </div>
             <div className="border-t border-[#E8A43A]/30"></div>
             
             <div className="flex items-center justify-between">
-              <span className="text-sm text-[#A69580]">Daily driving</span>
-              <span className="font-semibold text-[#3D2B1F]">2-4h/day (recommended)</span>
+              <span className="text-sm text-[#A69580]">Temps de conduite</span>
+              <span className="font-semibold text-[#3D2B1F]">2-4h/jour (recommandé)</span>
             </div>
           </div>
         </div>

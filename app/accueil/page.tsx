@@ -9,8 +9,7 @@ export default function Accueil() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4">
         <div className="flex items-center gap-2">
-          <img src="/icon-192.png" alt="Van'Africa" width={32} height={32} className="rounded-lg" />
-          <span className="font-bold text-[#8B4513] font-serif">Van&apos;Africa</span>
+          <img src="/logo-vanafrica.png" alt="Van'Africa" width={40} height={40} />
         </div>
         <Link href="/favoris" className="text-2xl">♡</Link>
       </div>
@@ -37,23 +36,22 @@ export default function Accueil() {
         <div className="grid grid-cols-2 gap-3 mb-6">
           <Link href="/journey" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">🗺️</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Your Journey</p>
-            <p className="text-xs text-[#A69580]">Mon itinéraire</p>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Votre voyage</p>
+           
           </Link>
           <Link href="/places" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">✅</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Places We Approve</p>
-            <p className="text-xs text-[#A69580]">Nos partenaires</p>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Nos partenaires</p>
+            
           </Link>
           <Link href="/travel-your-way" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">🧭</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Travel Your Way</p>
-            <p className="text-xs text-[#A69580]">Composez votre itinéraire</p>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Composez votre itinéraire</p>
+            
           </Link>
           <Link href="/inspiration" className="bg-white p-4 rounded-xl shadow-sm text-center">
             <span className="text-3xl">💡</span>
-            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Need Inspiration?</p>
-            <p className="text-xs text-[#A69580]">Idées de voyages</p>
+            <p className="text-sm font-semibold text-[#3D2B1F] mt-2 font-serif">Besoin d'inspiration ?</p>
           </Link>
         </div>
 
