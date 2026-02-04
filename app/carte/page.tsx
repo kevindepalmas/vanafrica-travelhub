@@ -82,9 +82,17 @@ export default function Carte() {
         
         el.textContent = String(etape.id);
 
-        new mapboxgl.Marker(el)
-          .setLngLat([etape.lng, etape.lat])
-          .addTo(map.current!);
+        el.addEventListener("click", () => {
+  if (etape.nom === "Knysna") {
+    window.location.href = "/etape/knysna";
+  } else if (etape.nom === "Addo Park") {
+    window.location.href = "/etape/addo";
+  }
+});
+
+new mapboxgl.Marker(el)
+  .setLngLat([etape.lng, etape.lat])
+  .addTo(map.current!);
       });
     });
   }, []);
